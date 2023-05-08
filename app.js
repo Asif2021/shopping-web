@@ -8,7 +8,7 @@ $(document).ready(async function(e){
 })
 function loadProduct(data){
     var li = document.createElement('li');
-    li.innerHTML = `<div class="card justify-content-center">` +
+    li.innerHTML = `<div class="card">` +
     `<div class="product-1 align-item-center p-2 text-center"> <img src="`+data.image+`" class="rounded" width="150" height="100">` +
     `<h6 class="m-2 font-weight-bold info">`+data.title+` </h6>` +
     `<div class="mt-3"> <span class=" text-1 d-block"> `+data.description+` </span></div>`+
