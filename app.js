@@ -2,9 +2,8 @@ $(document).ready(async function(e){
     const api = 'https://fakestoreapi.com/products';
     const response = await fetch(api);
     const datas = await response.json();
-    console.log(datas[0]);
-    datas[0].foreach((i)=>{
-        loadProduct(i)
+    datas.forEach((i)=>{
+        loadProduct(i);
     })
 })
 function loadProduct(data){
@@ -16,6 +15,6 @@ function loadProduct(data){
     `<div class="cost mt-1 text-dark"> <span> `+data.price+` </span>`+`</div>` +
     `</div>` +
     `<div class="button-color p-2 text-center text-white"> <span class="text-uppercase"> add to cart</span> </div>` + `</div>`
-    document.getElementById('home_product').appendChild(li);
+    document.getElementById("home_products").appendChild(li);
 
 }
