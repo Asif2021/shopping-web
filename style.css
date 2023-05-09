@@ -40,6 +40,9 @@ body {
     font-weight: 500;
     font-size: 13px;
 }
+::placeholder{
+    color: white;
+}
 .button-color:hover{
     background-color: black;
 }
@@ -55,3 +58,4 @@ ul li {
     justify-content: center;
     padding: 10px 30px;
 }
+

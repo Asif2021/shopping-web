@@ -2,10 +2,14 @@ $(document).ready(async function(e){
     const api = 'https://fakestoreapi.com/products';
     const response = await fetch(api);
     const datas = await response.json();
+    console.log(datas);
     datas.forEach((i)=>{
         loadProduct(i);
     })
 })
+// var totalCost = 0;
+// document.getElementById('totalCost').innerText = totalCost;
+
 function loadProduct(data){
     var li = document.createElement('li');
     li.innerHTML = `<div class="card">` +
@@ -14,7 +18,11 @@ function loadProduct(data){
     `<div class="mt-3"> <span class=" text-1 d-block"> `+data.description+` </span></div>`+
     `<div class="cost mt-1 text-dark"> <span> `+data.price+` </span>`+`</div>` +
     `</div>` +
-    `<div class="button-color p-2 text-center text-white"> <span class="text-uppercase"> add to cart</span> </div>` + `</div>`
+    `<button class="button-color p-2 text-center text-white" onclick="add(`+data.price+`)"> Add to Cart</button>` + `</div>`
     document.getElementById("home_products").appendChild(li);
 
+}
+
+function add(val){
+  document.getElementById("costList").innerHTML += "<li>" +val+ "</li>";
 }
