@@ -9,6 +9,7 @@ $(document).ready(async function(e){
 })
 // var totalCost = 0;
 // document.getElementById('totalCost').innerText = totalCost;
+    
 
 function loadProduct(data){
     var li = document.createElement('li');
@@ -18,11 +19,15 @@ function loadProduct(data){
     `<div class="mt-3"> <span class=" text-1 d-block"> `+data.description+` </span></div>`+
     `<div class="cost mt-1 text-dark"> <span> `+data.price+` </span>`+`</div>` +
     `</div>` +
-    `<button class="button-color p-2 text-center text-white" onclick="add(`+data.price+`)"> Add to Cart</button>` + `</div>`
+    `<button class="button-color p-2 text-center text-white" onclick="add(`+(data.price)+`)"> Add to Cart</button>` + `</div>`
     document.getElementById("home_products").appendChild(li);
 
 }
 
+
+var totalItems = 0;
 function add(val){
-  document.getElementById("costList").innerHTML += "<li>" +val+ "</li>";
+    document.getElementById("costList").innerHTML += "<li>" +val+ "</li>";
+    totalItems = totalItems+1;
+    document.getElementById('totalCost').innerText = totalItems;
 }
