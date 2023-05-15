@@ -12,12 +12,22 @@
     <title>Fetch API</title>
 </head>
 <body>
-    <div class="addtocart" id="cart">
-        Total Items = <b id="totalCost"> </b>
-            <!-- items details here -->
-            <ol id="costList"> 
+    <nav class="navbar navbar-expand-lg text-white bg-dark fixed-top container-fluid">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse align-text">
+            <div class="addtocart " id="cart">
+                Total Items = <b id="totalCost"> </b>
+          </div>
+        </div>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+            Total Cost 
+            </a>
+            <ol class="dropdown-menu" aria-labelledby="navbarDropdown" id="costList">
 
             </ol>
+          </div>
+      </nav>
        
     </div>
     <div class="container py-5"></div>

@@ -1,16 +1,19 @@
 $(document).ready(async function(e){
+    // hittiing a api 
     const api = 'https://fakestoreapi.com/products';
+    // getting response from api 
     const response = await fetch(api);
+    // getting data from in json format 
     const datas = await response.json();
     console.log(datas);
-    datas.forEach((i)=>{
+    
+    datas.map((i)=>{
+        // calling function loadProduct and passing data as i 
         loadProduct(i);
     })
 })
-// var totalCost = 0;
-// document.getElementById('totalCost').innerText = totalCost;
-    
-
+   
+// loadProduct function defination 
 function loadProduct(data){
     var li = document.createElement('li');
     li.innerHTML = `<div class="card">` +
@@ -26,8 +29,24 @@ function loadProduct(data){
 
 
 var totalItems = 0;
+document.getElementById('totalCost').innerText = totalItems;
+
+// adding items into cart 
 function add(val){
-    document.getElementById("costList").innerHTML += "<li>" +val+ "</li>";
+    document.getElementById("costList").innerHTML += "<li class='liID'>" +val+ `<button onclick="remove()"> X </button> `+"</li>";
     totalItems = totalItems+1;
+    document.getElementById('totalCost').innerText = totalItems;
+
+}
+
+// removing item from cart 
+function remove (){
+    var listItem = document.getElementsByClassName('liID');
+    for (var i = 0; i<listItem.length; i++){
+        listItem[i].onclick=function(){
+            this.parentNode.removeChild(this);
+        }
+    }
+    totalItems = totalItems-1;
     document.getElementById('totalCost').innerText = totalItems;
 }
