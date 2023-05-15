@@ -11,7 +11,7 @@ $(document).ready(async function(e){
         // calling function loadProduct and passing data as i 
         loadProduct(i);
     })
-})
+   })
    
 // loadProduct function defination 
 function loadProduct(data){
