@@ -11,7 +11,7 @@ product += `<div class="card col-10 "">
      <div class="card-body d-flex flex-column">
        <h5 class="card-title">${value.title}</h5>
     <p class="card-text">${value.price}</p>
-     <button class="button mt-auto" onclick="${add(value)}">add to cart </button>
+     <button class="button mt-auto" onclick=add(value)>add to cart </button>
      </div>
    </div>`
         })
@@ -29,12 +29,12 @@ document.getElementById('totalCost').innerText = totalItems;
 // adding items into cart 
 function add(val){
 
-    document.getElementById("product_table").innerHTML += `<tbody>
+    document.getElementById("product_table").innerHTML += `<tbody class="remove_TableData">
     <tr>
       <th scope="row">${val.title}</th>
       <td>${val.price}</td>
       <td><img class="table_image" src="${val.image}" alt="image"></td>
-      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+      <td> <button onclick="remove()"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
     </tr>
     </tbody>`
     totalItems = totalItems+1;
@@ -43,7 +43,7 @@ function add(val){
 
 // removing item from cart 
 function remove (){
-    var listItem = document.getElementsByClassName('liID');
+    var listItem = document.getElementsByClassName('remove_TableData');
     for (var i = 0; i<listItem.length; i++){
         listItem[i].onclick=function(){
             this.parentNode.removeChild(this);

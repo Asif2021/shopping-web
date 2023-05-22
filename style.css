@@ -19,9 +19,9 @@
     color: white;
 }
 .card img {
-    height: 150px;
-    border-radius: 20px;
-    background-color: transparent;
+    height: 180px;
+    border-radius: 30px;
+    mix-blend-mode: color-burn;
 }
 .button{
     padding: 10px;
@@ -31,6 +31,12 @@
     border-radius: 25px;
     color: white;
     text-transform: uppercase;
+}
+th{
+    width: 280px;
+}
+table{
+    font-size: 20px;
 }
 .button:hover{
     background-color: black;
