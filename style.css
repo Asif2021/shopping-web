@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .cards{
     display: flex;
@@ -19,9 +20,9 @@
     color: white;
 }
 .card img {
-    height: 180px;
+    height: 150px;
     border-radius: 30px;
-    mix-blend-mode: color-burn;
+   mix-blend-mode: multiply;
 }
 .button{
     padding: 10px;
@@ -32,12 +33,10 @@
     color: white;
     text-transform: uppercase;
 }
-th{
-    width: 280px;
-}
-table{
-    font-size: 20px;
-}
+.table{
+    font-size: 15px;
+    font-weight: bold;
+    }
 .button:hover{
     background-color: black;
 }
@@ -49,11 +48,13 @@ table{
     background-color: cadetblue;
 }
 .table_image{
-    height: 150px;
-    border-radius: 20px;
-    background-color: transparent;
+    height: 100px;
+    width: 100px;
+   }
+.scroll{
+    height: 300px;
+    overflow: scroll;
 }
-
-
-
-
+.title_row{
+  width: 20px;
+}
