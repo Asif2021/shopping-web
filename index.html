@@ -16,25 +16,35 @@
 
 <body>
   <!-- starting navbar and fixed it on the top  -->
-  <nav class="navbar navbar-expand-lg text-white bg-info fixed-top mx-5 p-4">
+  <nav class="navbar navbar-expand-lg text-white bg-transparent fixed-top mx-5 p-4">
     <div class="container-fluid fs-3">
       <div class="collapse navbar-collapse align-text">
         <!-- total items counter will show here  -->
         <div class="addtocart text-white" id="cart">
           <div class="d-flex align-items-center p-1 fs-1 cart_div">
             <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
-              <ol class="dropdown-menu w-100 scroll text-start" aria-labelledby="navbarDropdown" id="costList">
-                <table class="table text-center" id="product_table">
-                  <thead>
-                    <tr>
-                      <th class="bg-dark text-white p-3">Title</th>
-                      <th class="bg-dark text-white p-3">Price</th>
-                      <th class="bg-dark text-white p-3">Image</th>
-                      <th class="bg-dark text-white p-3"><i class="fa fa-trash" aria-hidden="true"></i>
-                      </th>
-                    </tr>
-                  </thead>
-                </table>
+              <ol class="dropdown-menu w-50 scroll text-start" aria-labelledby="navbarDropdown" id="costList">
+                <div class="container">
+                  <table class="table text-center table-bordered scroll">
+                    <thead>
+                      <tr>
+                        <th class="bg-dark text-white p-3">Title</th>
+                        <th class="bg-dark text-white p-3">Price</th>
+                        <th class="bg-dark text-white p-3">Image</th>
+                        <th class="bg-dark text-white p-3">Quantity</th>
+                        <th class="bg-dark text-white p-3"><i class="fa fa-trash" aria-hidden="true"></i>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody id="product_table"></tbody>
+                  </table>
+                  <div>
+                    <div class="subtotal">
+                      
+                  <!-- </div>
+                    <button class="clearAllBtn" onclick="clearAll()" >Clear All</button>
+                  </div> -->
+                </div>
               </ol>
               </a>
               <i class="fa-solid fa-cart-shopping fw-900"></i>
@@ -52,11 +62,12 @@
     <h2 class="display-5">products</h2>
   </div>
   <div>
-    <!-- total products card will show here  -->
-    <div id="home_products" class="row cards">
-
+      <div class="container">
+        <!-- total products card will show here  -->
+      <div id="home_products" class="home_productsrow cards">  
+      </div>
     </div>
   </div>
-  <script src="app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>

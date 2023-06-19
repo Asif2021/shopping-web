@@ -14,19 +14,26 @@
 .card{
     width: 18rem;
     padding: 20px;
-    background-color: cadetblue;
-    border: 1px solid black;
-    margin: 10px;
-    color: white;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    /* background-color: cadetblue; */
+    border: 1px solid rgba(0, 0, 0, 0.078);
+    margin: 15px;
+    color: black;
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
 }
 .card img {
     height: 150px;
     border-radius: 30px;
    mix-blend-mode: multiply;
 }
+.card:hover{
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0, 0, 0, 0.61);
+}
 .button{
     padding: 10px;
-    background-color: rgba(28, 28, 213, 0.541);
+    background-color: black;
     display: block;
     width: 100%;
     border-radius: 25px;
@@ -36,25 +43,86 @@
 .table{
     font-size: 15px;
     font-weight: bold;
-    }
+    table-layout: fixed;
+    /* width: auto; */
+}
 .button:hover{
-    background-color: black;
+    background-color: blue;
 }
 .cart_div{
-    border: 2px solid black;
+    color: black;
     border-radius: 20px;
-}
-.cart_div:hover{
-    background-color: cadetblue;
 }
 .table_image{
     height: 100px;
     width: 100px;
    }
 .scroll{
-    height: 300px;
-    overflow: scroll;
+    /* height: 400px; */
+    overflow-y: scroll;
 }
-.title_row{
-  width: 20px;
+.dropdown-toggle {
+    white-space: unset;
 }
+.wrapper{
+    /* height: 120px; */
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    border-radius: 12px;
+}
+.wrapper span{
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0px 5px 0px 5px;
+}
+.minus:hover{
+    background-color: red;
+}
+.numOfUnits:hover{
+    background-color: blue;
+}
+.plus:hover{
+    background-color: green;
+}
+
+.wrapper span.num{
+    font-size: 30px;
+}
+.clearAllBtn{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 60px;
+}
+.clearAllBtn:hover{
+background-color: blue;
+}
+.subtotal{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 35px;
+    padding: 10px;
+    }
+    .fs-5 {
+        font-size: 3.25rem!important;
+        padding: 10px;
+           }
+    .fs-5:hover{
+        color: red;
+    }
